@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c00ybvqkkyowf"]
+[gd_scene load_steps=5 format=3 uid="uid://c00ybvqkkyowf"]
 
-[ext_resource type="Script" path="res://Scripts/level.gd" id="1_0v2xu"]
+[ext_resource type="Script" path="res://Scenes/level.gd" id="1_0v2xu"]
 [ext_resource type="PackedScene" uid="uid://cu8gqwiawcy3i" path="res://Prefabs/Blocks/floor.tscn" id="1_nkp47"]
 [ext_resource type="PackedScene" uid="uid://ra58qvd2rsmy" path="res://Prefabs/Blocks/BaseBlock.tscn" id="2_w2c46"]
 [ext_resource type="PackedScene" uid="uid://ctspnylkb84us" path="res://Prefabs/Blocks/LongBlock.tscn" id="3_21o0o"]
-[ext_resource type="PackedScene" uid="uid://dxensdh5vcmba" path="res://Prefabs/UI/alien_1.tscn" id="5_8oyun"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_0v2xu")
@@ -34,7 +33,3 @@ position = Vector2(337, 32)
 
 [node name="LongBlock2" parent="." instance=ExtResource("3_21o0o")]
 position = Vector2(393, 15)
-
-[node name="Alien1" parent="." instance=ExtResource("5_8oyun")]
-position = Vector2(1028, 123)
-scale = Vector2(5.33, 5.33)

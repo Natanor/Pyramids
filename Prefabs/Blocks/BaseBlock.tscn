@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ra58qvd2rsmy"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://xp8c1ruwvnfa" path="res://Prefabs/Blocks/BaseBlockPhysicsMaterial.tres" id="1_22tlk"]
+[ext_resource type="Texture2D" uid="uid://boiy8ysihi7m7" path="res://Sprites/Blocks.png" id="1_1134u"]
+
+[node name="BaseBlock" type="RigidBody2D"]
+physics_material_override = ExtResource("1_22tlk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-11, -10, 11, -10, 11, 10, -11, 10)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1134u")
+hframes = 2
+vframes = 2

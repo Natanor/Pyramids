@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu8gqwiawcy3i"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b6dtk"]
+distance = -612.48
+
+[node name="Floor" type="RigidBody2D"]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_b6dtk")

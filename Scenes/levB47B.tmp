@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://c00ybvqkkyowf"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_0v2xu"]
+[ext_resource type="PackedScene" uid="uid://cu8gqwiawcy3i" path="res://Prefabs/Blocks/floor.tscn" id="1_nkp47"]
+[ext_resource type="PackedScene" uid="uid://cgovtf3m1i7i5" path="res://Prefabs/player.tscn" id="2_s2cm7"]
+[ext_resource type="PackedScene" uid="uid://ra58qvd2rsmy" path="res://Prefabs/Blocks/BaseBlock.tscn" id="2_w2c46"]
+[ext_resource type="PackedScene" uid="uid://ctspnylkb84us" path="res://Prefabs/Blocks/LongBlock.tscn" id="3_21o0o"]
+[ext_resource type="PackedScene" uid="uid://dxensdh5vcmba" path="res://Prefabs/UI/alien_1.tscn" id="5_8oyun"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_0v2xu")
+
+[node name="Player" parent="." instance=ExtResource("2_s2cm7")]
+position = Vector2(600, 100)
+moveSpeed = 500.0
+leftLimit = NodePath("../Clamps/MinClamp")
+rightLimit = NodePath("../Clamps/MaxClamp")
+movementRotation = 15.0
+
+[node name="Floor" parent="." instance=ExtResource("1_nkp47")]
+
+[node name="BaseBlock" parent="." instance=ExtResource("2_w2c46")]
+position = Vector2(390, 134)
+
+[node name="BaseBlock2" parent="." instance=ExtResource("2_w2c46")]
+position = Vector2(245, 100)
+
+[node name="BaseBlock3" parent="." instance=ExtResource("2_w2c46")]
+position = Vector2(756, 148)
+
+[node name="BaseBlock4" parent="." instance=ExtResource("2_w2c46")]
+position = Vector2(775, 206)
+
+[node name="BaseBlock5" parent="." instance=ExtResource("2_w2c46")]
+position = Vector2(385, 72)
+
+[node name="BaseBlock6" parent="." instance=ExtResource("2_w2c46")]
+position = Vector2(401, 41)
+
+[node name="LongBlock" parent="." instance=ExtResource("3_21o0o")]
+position = Vector2(337, 32)
+
+[node name="LongBlock2" parent="." instance=ExtResource("3_21o0o")]
+position = Vector2(393, 15)
+
+[node name="Alien1" parent="." instance=ExtResource("5_8oyun")]
+position = Vector2(1028, 123)
+scale = Vector2(5.33, 5.33)
+
+[node name="Clamps" type="Node2D" parent="."]
+
+[node name="MinClamp" type="Node2D" parent="Clamps"]
+position = Vector2(400, 600)
+
+[node name="MaxClamp" type="Node2D" parent="Clamps"]
+position = Vector2(800, 600)

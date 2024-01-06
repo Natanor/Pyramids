@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://c00ybvqkkyowf"]
+[gd_scene load_steps=6 format=3 uid="uid://c00ybvqkkyowf"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_0v2xu"]
 [ext_resource type="PackedScene" uid="uid://cu8gqwiawcy3i" path="res://Prefabs/Blocks/floor.tscn" id="1_nkp47"]
 [ext_resource type="PackedScene" uid="uid://cgovtf3m1i7i5" path="res://Prefabs/player.tscn" id="2_s2cm7"]
+[ext_resource type="PackedScene" uid="uid://c1788ol0hkiul" path="res://Prefabs/PyramidBase.tscn" id="5_2rsjc"]
 [ext_resource type="PackedScene" uid="uid://dxensdh5vcmba" path="res://Prefabs/UI/alien_1.tscn" id="5_8oyun"]
 
 [node name="level" type="Node2D" node_paths=PackedStringArray("block_holder") groups=["Level"]]
 script = ExtResource("1_0v2xu")
 block_holder = NodePath("BlockHolder")
-block_spawn_wait_time = 3.0
+block_spawn_wait_time = 1.0
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_s2cm7")]
 position = Vector2(600, 100)
@@ -18,6 +19,7 @@ rightLimit = NodePath("../Clamps/MaxClamp")
 movementRotation = 15.0
 
 [node name="Floor" parent="." instance=ExtResource("1_nkp47")]
+position = Vector2(0, 108)
 
 [node name="Alien1" parent="." instance=ExtResource("5_8oyun")]
 position = Vector2(1028, 123)
@@ -26,9 +28,12 @@ scale = Vector2(5.33, 5.33)
 [node name="Clamps" type="Node2D" parent="."]
 
 [node name="MinClamp" type="Node2D" parent="Clamps"]
-position = Vector2(400, 600)
+position = Vector2(238, 604)
 
 [node name="MaxClamp" type="Node2D" parent="Clamps"]
 position = Vector2(800, 600)
 
 [node name="BlockHolder" type="Node2D" parent="."]
+
+[node name="PyramidBase" parent="." instance=ExtResource("5_2rsjc")]
+position = Vector2(298, 663)

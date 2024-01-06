@@ -26,4 +26,10 @@ func _process(delta):
 			isHeld = false
 			freeze = false
 			level._standbyNewBlock()
-		pass
+		
+	if position.y > level.getKillHeight() and not freeze: # this is very finiky without a collider instead, but it sorta works
+		($Sprite2D as Sprite2D).modulate = Color(0.662745, 0.662745, 0.662745, 1)
+		freeze = true
+		
+		level.lives -= 1;
+		

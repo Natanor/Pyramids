@@ -7,12 +7,18 @@ var block_type_array: Array[Resource]
 @export var block_holder: Node2D
 @export var block_spawn_wait_time: float
 
+var lives = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_retrieveBlockTypes()
 	_instantiateNewBlock()
 	pass # Replace with function body.
+
+func getKillHeight():
+	#var camera =  get_viewport()
+	#return camera.get_camera_2d().limit_bottom
+	return 700
 
 func _process(delta):
 	pass

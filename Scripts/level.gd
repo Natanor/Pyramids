@@ -32,6 +32,7 @@ func _instantiateNewBlock():
 	var num = rng.randi_range(0, block_type_array.size() - 1)
 	var newblock = block_type_array[num].instantiate()
 	block_holder.add_child(newblock)
+	
 	pass
 	
 func _standbyNewBlock():

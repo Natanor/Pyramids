@@ -7,7 +7,6 @@
 [node name="BaseBlock" type="RigidBody2D"]
 mass = 111.59
 physics_material_override = ExtResource("1_22tlk")
-freeze_mode = 1
 continuous_cd = 2
 max_contacts_reported = 10
 script = ExtResource("2_3tuet")

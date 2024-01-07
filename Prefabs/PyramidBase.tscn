@@ -7,9 +7,9 @@
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-14.9265, 11.75)
 scale = Vector2(0.998771, 0.590909)
-polygon = PackedVector2Array(14.9449, -16.5, 673.755, -16.5, 673.755, 73.1923, 14.9449, 73.1923)
+polygon = PackedVector2Array(190.16, -16.5, 497.538, -16.5, 497.538, 73.1923, 191.161, 73.1923)
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D"]
 position = Vector2(344.225, 28.1346)
-scale = Vector2(659.06, 90.1154)
+scale = Vector2(307.2, 90)
 texture = SubResource("PlaceholderTexture2D_ry77s")

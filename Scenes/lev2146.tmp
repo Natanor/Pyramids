@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c00ybvqkkyowf"]
+[gd_scene load_steps=6 format=3 uid="uid://c00ybvqkkyowf"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_0v2xu"]
 [ext_resource type="PackedScene" uid="uid://cgovtf3m1i7i5" path="res://Prefabs/player.tscn" id="2_s2cm7"]
 [ext_resource type="PackedScene" uid="uid://c1788ol0hkiul" path="res://Prefabs/PyramidBase.tscn" id="5_2rsjc"]
-[ext_resource type="PhysicsMaterial" uid="uid://xp8c1ruwvnfa" path="res://Prefabs/Blocks/BaseBlockPhysicsMaterial.tres" id="5_6gijx"]
 [ext_resource type="PackedScene" uid="uid://dxensdh5vcmba" path="res://Prefabs/UI/alien_1.tscn" id="5_8oyun"]
 
 [sub_resource type="GDScript" id="GDScript_i01b2"]
@@ -25,7 +24,7 @@ script = ExtResource("1_0v2xu")
 block_holder = NodePath("BlockHolder")
 block_spawn_wait_time = 1.0
 camera = NodePath("Camera2D")
-camera_offset = 100
+camera_offset = 300
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(640, 360)
@@ -37,10 +36,10 @@ scale = Vector2(5.33, 5.33)
 [node name="Clamps" type="Node2D" parent="."]
 
 [node name="MinClamp" type="Node2D" parent="Clamps"]
-position = Vector2(473, 665)
+position = Vector2(290, 657)
 
 [node name="MaxClamp" type="Node2D" parent="Clamps"]
-position = Vector2(781, 665)
+position = Vector2(955, 666)
 
 [node name="BlockHolder" type="Node2D" parent="."]
 script = SubResource("GDScript_i01b2")
@@ -53,5 +52,4 @@ rightLimit = NodePath("../Clamps/MaxClamp")
 movementRotation = 15.0
 
 [node name="PyramidBase" parent="." instance=ExtResource("5_2rsjc")]
-position = Vector2(298, 660)
-physics_material_override = ExtResource("5_6gijx")
+position = Vector2(298, 663)

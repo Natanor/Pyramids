@@ -2,4 +2,5 @@
 
 [resource]
 rough = true
+bounce = 0.71
 absorbent = true

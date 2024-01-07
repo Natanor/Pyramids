@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_wu6ck"]
 
 [node name="Player" type="Node2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_wu6ck")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
